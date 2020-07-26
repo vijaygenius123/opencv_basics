@@ -1,9 +1,12 @@
 import numpy as np
 import cv2
 
-white = np.ones([150,200,1],'uint8')
+white = np.ones([150,200,3],'uint8')
 white =  white *  ( 2**8 - 1 )
-cv2.imshow("White",white)
+
+blue = white.copy()
+blue[:,:]= (255,0,0)
+cv2.imshow("Blue",blue)
 
 cv2.waitKey(0)
 
